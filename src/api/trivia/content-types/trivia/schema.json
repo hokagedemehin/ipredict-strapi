@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trivias",
+  "info": {
+    "singularName": "trivia",
+    "pluralName": "trivias",
+    "displayName": "trivia"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quesId": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "visible": {
+      "type": "boolean",
+      "default": true
+    },
+    "optionA": {
+      "type": "string"
+    },
+    "optionB": {
+      "type": "string"
+    },
+    "optionC": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "string"
+    }
+  }
+}
