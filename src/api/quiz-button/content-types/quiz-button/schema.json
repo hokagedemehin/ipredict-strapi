@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quiz_buttons",
+  "info": {
+    "singularName": "quiz-button",
+    "pluralName": "quiz-buttons",
+    "displayName": "quizButton"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "coins": {
+      "type": "integer"
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}

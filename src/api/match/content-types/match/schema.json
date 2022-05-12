@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matches",
+  "info": {
+    "singularName": "match",
+    "pluralName": "matches",
+    "displayName": "match",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "awayLogo": {
+      "type": "string"
+    },
+    "awayName": {
+      "type": "string"
+    },
+    "homeLogo": {
+      "type": "string"
+    },
+    "homeName": {
+      "type": "string"
+    },
+    "result": {
+      "type": "string",
+      "default": "not played"
+    },
+    "selected_match": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::selected-match.selected-match",
+      "inversedBy": "matches"
+    },
+    "matchId": {
+      "type": "string"
+    },
+    "matchDate": {
+      "type": "datetime"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

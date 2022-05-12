@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trivia_attempts",
+  "info": {
+    "singularName": "trivia-attempt",
+    "pluralName": "trivia-attempts",
+    "displayName": "triviaAttempt"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "attemptId": {
+      "type": "string"
+    },
+    "correctAnswers": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "email"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "noOfQuestions": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "string"
+    },
+    "winner": {
+      "type": "string"
+    },
+    "wrongAnswers": {
+      "type": "integer"
+    },
+    "trivia_responses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trivia-response.trivia-response",
+      "mappedBy": "trivia_attempt"
+    }
+  }
+}

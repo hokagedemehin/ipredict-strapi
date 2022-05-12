@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_profiles",
+  "info": {
+    "singularName": "user-profile",
+    "pluralName": "user-profiles",
+    "displayName": "userProfile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phoneNo": {
+      "type": "string"
+    },
+    "birthDay": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "coins": {
+      "type": "integer"
+    },
+    "money": {
+      "type": "integer"
+    },
+    "request": {
+      "type": "integer"
+    },
+    "referralCode": {
+      "type": "string"
+    },
+    "referralPoints": {
+      "type": "integer"
+    },
+    "withdraws": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::withdraw.withdraw",
+      "mappedBy": "user_profile"
+    },
+    "freeClaim": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

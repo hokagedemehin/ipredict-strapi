@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_matches",
+  "info": {
+    "singularName": "user-match",
+    "pluralName": "user-matches",
+    "displayName": "userMatch",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "awayLogo": {
+      "type": "string"
+    },
+    "awayName": {
+      "type": "string"
+    },
+    "homeLogo": {
+      "type": "string"
+    },
+    "homeName": {
+      "type": "string"
+    },
+    "selectId": {
+      "type": "integer"
+    },
+    "matchDate": {
+      "type": "datetime"
+    },
+    "matchId": {
+      "type": "string"
+    },
+    "result": {
+      "type": "string"
+    },
+    "userpredict": {
+      "type": "string"
+    },
+    "selected_match": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::selected-match.selected-match",
+      "inversedBy": "user_matches"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "strapiMatchId": {
+      "type": "integer"
+    },
+    "uniqueId": {
+      "type": "string"
+    }
+  }
+}

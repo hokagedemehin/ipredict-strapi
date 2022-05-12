@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "selected_matches",
+  "info": {
+    "singularName": "selected-match",
+    "pluralName": "selected-matches",
+    "displayName": "selectedMatch",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "string"
+    },
+    "noOfMatches": {
+      "type": "integer"
+    },
+    "latest": {
+      "type": "boolean"
+    },
+    "matches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::match.match",
+      "mappedBy": "selected_match"
+    },
+    "user_matches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-match.user-match",
+      "mappedBy": "selected_match"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
