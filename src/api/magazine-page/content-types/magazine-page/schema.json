@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "magazine_pages",
+  "info": {
+    "singularName": "magazine-page",
+    "pluralName": "magazine-pages",
+    "displayName": "magazinePage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "imageURL": {
+      "type": "string"
+    }
+  }
+}

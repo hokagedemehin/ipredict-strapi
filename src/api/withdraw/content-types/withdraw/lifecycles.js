@@ -3,7 +3,7 @@ module.exports = {
     const { result } = event;
     try {
       await strapi.plugins["email"].services.email.send({
-        to: "ibk2k7@gmail.com",
+        to: "ongamesport@gmail.com",
         from: "akimsal2001@gmail.com",
         bcc: "ibk2k7@gmail.com",
         subject: "New Withdrawal Request",
