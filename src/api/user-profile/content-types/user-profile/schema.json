@@ -57,6 +57,12 @@
     "freeClaim": {
       "type": "boolean",
       "default": false
+    },
+    "subscriptions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subscription.subscription",
+      "mappedBy": "user_profile"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "magazine-page",
     "pluralName": "magazine-pages",
-    "displayName": "magazinePage"
+    "displayName": "magazinePage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,15 @@
     },
     "imageURL": {
       "type": "string"
+    },
+    "page": {
+      "type": "string"
+    },
+    "magazine": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::magazine.magazine",
+      "inversedBy": "magazine_pages"
     }
   }
 }
