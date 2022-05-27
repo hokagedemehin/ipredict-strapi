@@ -32,9 +32,6 @@
     },
     "duration": {
       "type": "string"
-    },
-    "duartionDate": {
-      "type": "datetime"
     }
   }
 }
