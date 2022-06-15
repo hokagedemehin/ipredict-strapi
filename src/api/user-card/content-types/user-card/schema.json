@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_cards",
+  "info": {
+    "singularName": "user-card",
+    "pluralName": "user-cards",
+    "displayName": "userCard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "standard",
+        "premium"
+      ]
+    },
+    "team_card": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::team-card.team-card",
+      "inversedBy": "user_cards"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "value": {
+      "type": "integer"
+    },
+    "winCoins": {
+      "type": "integer"
+    },
+    "loss": {
+      "type": "integer"
+    },
+    "worth": {
+      "type": "integer"
+    },
+    "season": {
+      "type": "string"
+    },
+    "currentValue": {
+      "type": "integer"
+    },
+    "user_card_matches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-card-match.user-card-match",
+      "mappedBy": "user_card"
+    },
+    "reward": {
+      "type": "integer"
+    },
+    "winCash": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_card_matches",
+  "info": {
+    "singularName": "user-card-match",
+    "pluralName": "user-card-matches",
+    "displayName": "userCardMatch",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "string"
+    },
+    "advantage": {
+      "type": "enumeration",
+      "enum": [
+        "home",
+        "away"
+      ]
+    },
+    "matchDate": {
+      "type": "datetime"
+    },
+    "opponentName": {
+      "type": "string"
+    },
+    "opponentLogo": {
+      "type": "string"
+    },
+    "result": {
+      "type": "enumeration",
+      "enum": [
+        "home",
+        "draw",
+        "away",
+        "not played"
+      ]
+    },
+    "calculated": {
+      "type": "boolean"
+    },
+    "user_card": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-card.user-card",
+      "inversedBy": "user_card_matches"
+    },
+    "team_card_match": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::team-card-match.team-card-match",
+      "inversedBy": "user_card_matches"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_card_matches",
+  "info": {
+    "singularName": "team-card-match",
+    "pluralName": "team-card-matches",
+    "displayName": "teamCardMatch",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cardName": {
+      "type": "string"
+    },
+    "cardLogo": {
+      "type": "string"
+    },
+    "advantage": {
+      "type": "enumeration",
+      "enum": [
+        "home",
+        "away"
+      ]
+    },
+    "matchDate": {
+      "type": "datetime"
+    },
+    "opponentName": {
+      "type": "string"
+    },
+    "opponentLogo": {
+      "type": "string"
+    },
+    "result": {
+      "type": "enumeration",
+      "enum": [
+        "home",
+        "away",
+        "draw",
+        "not played"
+      ]
+    },
+    "team_card": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::team-card.team-card",
+      "inversedBy": "team_card_matches"
+    },
+    "latest": {
+      "type": "boolean"
+    },
+    "season": {
+      "type": "string"
+    },
+    "user_card_matches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-card-match.user-card-match",
+      "mappedBy": "team_card_match"
+    }
+  }
+}

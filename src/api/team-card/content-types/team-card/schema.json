@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_cards",
+  "info": {
+    "singularName": "team-card",
+    "pluralName": "team-cards",
+    "displayName": "teamCard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "standard",
+        "premium"
+      ]
+    },
+    "value": {
+      "type": "integer"
+    },
+    "winCoins": {
+      "type": "integer"
+    },
+    "country": {
+      "type": "string"
+    },
+    "loss": {
+      "type": "integer"
+    },
+    "worth": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "user_cards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-card.user-card",
+      "mappedBy": "team_card"
+    },
+    "season": {
+      "type": "string"
+    },
+    "latest": {
+      "type": "boolean"
+    },
+    "team_card_matches": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::team-card-match.team-card-match",
+      "mappedBy": "team_card"
+    },
+    "winCash": {
+      "type": "integer"
+    }
+  }
+}
