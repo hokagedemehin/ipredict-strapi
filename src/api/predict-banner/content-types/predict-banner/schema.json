@@ -17,6 +17,9 @@
     },
     "prize": {
       "type": "string"
+    },
+    "coins": {
+      "type": "integer"
     }
   }
 }

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coins",
+  "info": {
+    "singularName": "coin",
+    "pluralName": "coins",
+    "displayName": "coin"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "coins": {
+      "type": "integer"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "discount": {
+      "type": "integer"
+    },
+    "badge": {
+      "type": "string"
+    }
+  }
+}
