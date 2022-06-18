@@ -28,9 +28,6 @@
     "value": {
       "type": "integer"
     },
-    "winCoins": {
-      "type": "integer"
-    },
     "country": {
       "type": "string"
     },
